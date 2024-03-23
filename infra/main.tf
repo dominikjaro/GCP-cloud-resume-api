@@ -8,17 +8,17 @@ data "archive_file" "cloudfunction_zip" {
 }
 
 # Create the Cloud Storage bucket to store the code
-resource "google_storage_bucket" "cloudresume_function_bucket" {
-  name = "cloudresume-function-bucket"
+resource "google_storage_bucket" "resume_function_bucket" {
+  name = "resume-function-bucket"
   location = var.gcp_region
   storage_class = "REGIONAL"
 }
 
 # Upload the zip file to the bucket
-resource "google_cloud_storage_bucket_object" "cloudfunction_zip" {
+resource "google_storage_bucket_object" "cloudfunction_zip" {
   name = "function.zip" 
   source = var.zip_file
-  bucket = google_storage_bucket.cloudresume_function_bucket.name
+  bucket = google_storage_bucket.resume_function_bucket.name
 }
 
 # Create the Cloud Function
@@ -27,7 +27,7 @@ resource "google_cloudfunctions_function" "cloudresumeapi_function" {
   name = "cloudresumeapi"
   runtime = "python39"
   entry_point = "get_resume"
-  source_archive_bucket = google_storage_bucket.cloudresume_function_bucket.name
+  source_archive_bucket = google_storage_bucket.resume_function_bucket.name
   source_archive_object = var.zip_file
   max_instances = 10
     available_memory_mb = 128
