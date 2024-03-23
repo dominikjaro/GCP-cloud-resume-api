@@ -43,3 +43,11 @@ resource "google_cloudfunctions_function_iam_member" "public_access_function" {
   role  = "roles/cloudfunctions.invoker"
   member = "allUsers"
 }
+
+
+# Just testing if the Cloud Build works fine
+resource "google_storage_bucket_object" "image"{
+  name = "images.jpg"
+  source = "${path.module}/../images/architecture-image.png"
+  bucket = google_storage_bucket.resume_function_bucket.name
+} 
