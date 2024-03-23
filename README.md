@@ -22,10 +22,10 @@ A project where I built and deployed a serverless API using Google Cloud Functio
 
 **Create the infrastructure using Terraform**
 
-    * provider.tf
-    * variables.tf
-    * terraform.tfvars
-    * main.tf
+* provider.tf
+* variables.tf
+* terraform.tfvars
+* main.tf
 
 ### 3. Create the function using Python
 
