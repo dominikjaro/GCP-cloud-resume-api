@@ -32,3 +32,10 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore the service account key
+cloud-resume-api-key.json
+
+# Ignore the .json file
+*.json
+

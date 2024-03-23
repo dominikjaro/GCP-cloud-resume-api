@@ -1,0 +1,3 @@
+function-framework=3.*
+Flask
+google-cloud-firestore
