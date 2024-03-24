@@ -80,7 +80,7 @@ jobs:
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
-      run: terraform fmt -check ./infra
+      run: terraform fmt -check 
       env:
           GOOGLE_CREDENTIALS: ${{ secrets.gcp_svc_key }}
 
