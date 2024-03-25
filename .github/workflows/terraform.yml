@@ -86,7 +86,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -input=false 
+      run: cd infra && terraform plan -input=false 
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.gcp_svc_key }}
 
