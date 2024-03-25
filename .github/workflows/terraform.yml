@@ -82,17 +82,17 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -check 
       env:
-          GOOGLE_CREDENTIALS: ${{ secrets.gcp_svc_key }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GCP_SVC_KEY }}
 
     # Setup credentials
     - name: Setup credentials
-      run: echo "${{ secrets.gcp_svc_key }}" > cloud-resume-api-key.json
+      run: echo "${{ secrets.GCP_SVC_KEY }}" > cloud-resume-api-key.json
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: cd infra && terraform plan -input=false -var-file=terraform.tfvars
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.gcp_svc_key }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_SVC_KEY }}
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
@@ -100,4 +100,4 @@ jobs:
       if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false ./infra
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.gcp_svc_key }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_SVC_KEY }}
