@@ -68,3 +68,8 @@ When prompted, review the changes and type `yes` to confirm that you want to app
 ### 6. Test the API
 
 API URL: <https://europe-west2-cloud-resume-api-418008.cloudfunctions.net/cloudresumeapi-1>
+Or open the terminal and run the following command:
+
+```
+curl https://europe-west2-cloud-resume-api-418008.cloudfunctions.net/cloudresumeapi-1
+```
