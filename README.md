@@ -6,6 +6,8 @@ A project where I built and deployed a serverless API using Google Cloud Functio
 
 ![Reference image](/images/architecture-image.png)
 
+Reference website: <https://www.cloudresumeapi.dev>
+
 **Pre-requisites**
 
 * A [Google Cloud Platform](https://cloud.google.com/?hl=en) account and a project
