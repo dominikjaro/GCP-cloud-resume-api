@@ -63,7 +63,7 @@ When prompted, review the changes and type `yes` to confirm that you want to app
 2. I created a trigger to build the function when a new commit is pushed to the repository
 3. I created the cloudbuild.yaml file to define the build steps
 
-```
+
 
 ### 6. Test the API
 
