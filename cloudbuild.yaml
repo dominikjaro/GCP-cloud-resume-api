@@ -1,0 +1,10 @@
+steps:
+# Step 1: Checkout the code from GitHub 
+ - name: 'gcr.io/cloud-builders/git' 
+   args: ['clone','https://github.com/dom-j/gcp-resume-challenge.git','cloud-resume-api',]
+  
+#Deploy to Cloud Storage
+
+ - name: 'gcr.io/cloud-builders/gsutil'
+   args: ['cp', '-r','function.zip','gs://resume-function-bucket',]
+ 
