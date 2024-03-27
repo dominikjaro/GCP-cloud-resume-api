@@ -39,7 +39,7 @@ resource "google_cloudfunctions_function" "cloudresumeapi_function" {
 resource "google_cloudfunctions_function_iam_member" "public_access_function" {
   project = var.gcp_project
   region = var.gcp_region
-  cloud_function = google_cloudfunctions_function.cloudresumeapi_function.name
+  cloud_function = google_cloudfunctions_function.cloudresgit umeapi_function.name
   role  = "roles/cloudfunctions.invoker"
   member = "allUsers"
 }

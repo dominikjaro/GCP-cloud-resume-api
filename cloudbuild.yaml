@@ -6,5 +6,5 @@ steps:
 #Deploy to Cloud Storage
 
  - name: 'gcr.io/cloud-builders/gsutil'
-   args: ['cp', '-r','function.zip','gs://resume-function-bucket',]
+   args: ['cp', '-r','infra/function.zip','gs://resume-function-bucket',]
  
