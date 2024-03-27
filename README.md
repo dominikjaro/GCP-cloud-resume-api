@@ -1,6 +1,6 @@
 # GCP-cloud-resume-api
 
-A project where I built and deployed a serverless API using Google Cloud Functions and Firestore, integrated with Cloud Build as CI/CD to deploy functions on every push to GitHub automatically. An API that can serve resume data in JSON format.
+A project where I built and deployed a serverless API using Google Cloud Functions and Firestore, integrated with Cloud Build as CI/CD to deploy functions on every push to GitHub automatically. An API that can serve resume data in JSON format. I used Terraform to manage and provision cloud infrastructure.
 
 ## Architecture Diagram
 
